@@ -1,24 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>日柱与时柱选择</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        label {
-            display: inline-block;
-            width: 60px;
-        }
-        .input-group {
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 让页面在手机上适应屏幕 -->
+  <title>奇门求测分析</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      font-size: 16px; /* 默认字体大小 */
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    label {
+      display: inline-block;
+      width: 80px;
+      font-size: 16px;
+    }
+
+    select, textarea, button {
+      font-size: 16px;
+    }
+
+    /* 在手机屏幕上调整字体大小 */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 18px; /* 增大手机上的默认字体 */
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      label {
+        font-size: 18px;
+        width: 100px; /* 让标签稍微变宽，方便触控 */
+      }
+
+      select, textarea, button {
+        font-size: 18px;
+      }
+
+      button {
+        padding: 10px 20px; /* 增加按钮大小，方便点击 */
+      }
+    }
+  </style>
 </head>
 <body>
     <h2>选择日柱信息</h2>
@@ -118,7 +148,7 @@
             <option value="九天">九天</option>
         </select>
     </div>
-
+    <br>
     <button id="confirmBtn">确定</button>
 
     <h3>生成结果</h3>
@@ -130,6 +160,7 @@
         <textarea id="eventInput" rows="3" cols="50" placeholder="请输入求测事件"></textarea>
     </div>
     <div class="input-group">
+        <br>
         <button id="analyzeBtn">分析结果</button>
     </div>
 
